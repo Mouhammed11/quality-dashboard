@@ -2,14 +2,15 @@ name: Continuous Integration and Delivery
 on:
   push:
     branches: [main]
+
 jobs:
   test_and_build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
       - uses: actions/checkout@v2
-      - name: npm ci && npm run build
-      - run: 
+      - name: Run npm install, test and build
+      - run: |
           npm ci
           npm test
           npm run build
@@ -35,7 +36,9 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SMARTPLANT_C0AB0 }}'
+          firebaseServiceAccount: >-
+            ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SMARTPLANT_C0AB0 
+            }}
           channelId: live
           projectId: smartplant-c0ab0
         
