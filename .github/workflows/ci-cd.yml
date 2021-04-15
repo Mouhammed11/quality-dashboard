@@ -2,10 +2,9 @@
 # https://github.com/firebase/firebase-tools
 
 name: Continuous Integration and Delivery
-'on':
+on:
   push:
-    branches:
-      - main
+    branches: [main]
 jobs:
   test_and_build:
     runs-on: ubuntu-latest
@@ -18,7 +17,7 @@ jobs:
           npm test
           npm run build
       - name: Upload build artifact
-        uses: action/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: build
           path: build
@@ -29,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
       - name: Download build artifact
         uses: actions/download-artifact@v2
         with:
