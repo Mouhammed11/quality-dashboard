@@ -43,4 +43,4 @@ jobs:
           channelId: live
           projectId: smartplant-c0ab0
         env:
-          
+          FIREBASE_CLI_PREVIEWS: hostingchannels
