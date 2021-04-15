@@ -18,7 +18,7 @@ const App = () => {
         color: '#6EC177',
         margin: 0
       }}>Plant</h1>
-      <p>Video Display of Plant</p>
+      <p>Video Display of Plants</p>
     </div>
   )
 }
