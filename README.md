@@ -1,1 +1,1 @@
-# quality-dashboard
+# Quality Dashboard
