@@ -42,5 +42,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SMARTPLANT_C0AB0 }}'
           channelId: live
           projectId: smartplant-c0ab0
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+        
