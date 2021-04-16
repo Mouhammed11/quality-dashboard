@@ -1,6 +1,6 @@
 {
   "projects": {
     "default": "smartplant-c0ab0",
-    "staging": "smartplant-c0ab0"
+    "staging": "smartplant-staging"
   }
 }
