@@ -40,7 +40,7 @@ jobs:
           channelId: live
           projectId: smartplant-c0ab0
         
-deploy_to_staging:
+  deploy_to_staging:
     if: github.ref == 'refs/heads/staging'
     needs: test_and_build
     runs-on: ubuntu-latest
